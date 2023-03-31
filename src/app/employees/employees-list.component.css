@@ -1,0 +1,10 @@
+@media screen and (min-width: 1920px) {
+    .tablediv{
+        margin-right: 500px;
+        margin-top: 20px;
+    }
+    table{
+        width: 1800px;
+        height: 400px;
+    }
+  }
