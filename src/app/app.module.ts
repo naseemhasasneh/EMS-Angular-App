@@ -10,7 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import {MatButtonModule} from '@angular/material/button';
+import { MaterialModule } from './material/material.module';
 
 
 const routes: Routes = [
@@ -29,13 +29,12 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    MatButtonModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     DataTablesModule,
     CommonModule,
     BrowserAnimationsModule,
-   
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

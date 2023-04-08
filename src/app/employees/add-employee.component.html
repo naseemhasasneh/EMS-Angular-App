@@ -6,41 +6,41 @@
               <div class="form-group">
                 <input hidden type="text" class="form-control" formControlName="id">
               </div>
-              <div class="form-group">
-                <label>Employee Name</label>
-                <input type="text" class="form-control" formControlName="name"  placeholder="Enter employee name">
+              <mat-form-field appearance="fill">
+                <mat-label>Employee Name</mat-label>
+                <input matInput type="text" class="form-control" formControlName="name" >
                 <span *ngIf="employeeForm.get('name')?.invalid && (employeeForm.get('name')?.dirty || employeeForm.get('name')?.touched)">
                   <span class="text-danger" *ngIf="employeeForm.get('name')?.errors?.['required']">Employee Name is required</span>
                   <span class="text-danger" *ngIf="employeeForm.get('name')?.errors?.['minlength']">Employee Name should at least contain 3 char</span>
                 </span>
-              </div>
+              </mat-form-field>
               <br>
-              <div class="form-group">
-                <label>Employee age</label>
-                <input type="number" class="form-control" formControlName="age"  placeholder="Enter employee age">
+              <mat-form-field appearance="fill">
+                <mat-label>Employee Age</mat-label>
+                <input matInput type="text" class="form-control" formControlName="age" >
                 <span *ngIf="employeeForm.get('age')?.invalid && (employeeForm.get('age')?.dirty || employeeForm.get('age')?.touched)">
-                  <span class="text-danger" *ngIf="employeeForm.get('age')?.errors?.['required']">Employee Age is required</span>
-                  <span class="text-danger" *ngIf="employeeForm.get('salary')?.errors?.['range']">Employee Age should be between 22 and 50</span>
+                  <span class="text-danger" *ngIf="employeeForm.get('age')?.errors?.['required']">Employee Name is required</span>
+                  <span class="text-danger" *ngIf="employeeForm.get('age')?.errors?.['minlength']">Employee Name should at least contain 3 char</span>
                 </span>
-              </div>
+              </mat-form-field>
               <br>
-              <div class="form-group">
-                <label>Employee position</label>
-                <input type="text" class="form-control" formControlName="position"  placeholder="Enter employee position">
+              <mat-form-field appearance="fill">
+                <mat-label>Employee position</mat-label>
+                <input matInput type="text" class="form-control" formControlName="position" >
                 <span *ngIf="employeeForm.get('position')?.invalid && (employeeForm.get('position')?.dirty || employeeForm.get('position')?.touched)">
-                  <span class="text-danger" *ngIf="employeeForm.get('position')?.errors?.['required']">Employee Position is required</span>
-                  <span class="text-danger" *ngIf="employeeForm.get('position')?.errors?.['minlength']">Employee Position should at least contain 3 char</span>
+                  <span class="text-danger" *ngIf="employeeForm.get('position')?.errors?.['required']">Employee Name is required</span>
+                  <span class="text-danger" *ngIf="employeeForm.get('position')?.errors?.['minlength']">Employee Name should at least contain 3 char</span>
                 </span>
-              </div>
+              </mat-form-field>       
               <br>
-              <div class="form-group">
-                <label>Employee salary</label>
-                <input type="number" class="form-control" formControlName="salary"  placeholder="Enter employee salary">
+              <mat-form-field appearance="fill">
+                <mat-label>Employee salary</mat-label>
+                <input matInput type="text" class="form-control" formControlName="salary" >
                 <span *ngIf="employeeForm.get('salary')?.invalid && (employeeForm.get('salary')?.dirty || employeeForm.get('salary')?.touched)">
-                  <span class="text-danger" *ngIf="employeeForm.get('salary')?.errors?.['required']">Employee Salary is required</span>
-                  <span class="text-danger" *ngIf="employeeForm.get('salary')?.errors?.['range']">Employee Salary should be between 260 and 5000</span>
+                  <span class="text-danger" *ngIf="employeeForm.get('salary')?.errors?.['required']">Employee Name is required</span>
+                  <span class="text-danger" *ngIf="employeeForm.get('salary')?.errors?.['minlength']">Employee Name should at least contain 3 char</span>
                 </span>
-              </div>
+              </mat-form-field>
               <br>
               <button type="submit" mat-raised-button color="primary" [disabled]="!employeeForm.valid" (click)="onSubmit()" class="btn btn-primary">Submit</button>
             </form>
