@@ -90,6 +90,10 @@ ngOnDestroy(): void {
       res=>this.onComplete()
     )
   }
+  public errorHandling = (control: string, error: string) => {
+    return this.employeeForm.controls[control].hasError(error);
+  }
+
 
   onComplete(){
     this.router.navigate(['/employees']);
